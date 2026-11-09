@@ -1,31 +1,39 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Owner and repository configuration
+owner: graemescott2000
+repo: txtcraft-status
 
+# Status page branding
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Core API & Database
+    url: https://txtcraft.ca/api/health
+    icon: https://txtcraft.ca/favicon.ico
+    check: "status-code"
+    expectedStatusCodes:
+      - 200
 
+  - name: TxtCraft Marketing & Web Builder
+    url: https://txtcraft.ca/
+    icon: https://txtcraft.ca/favicon.ico
+
+  - name: Tenant Wildcard Routing (*.txtcraft.ca)
+    url: https://solvedthings.txtcraft.ca/
+
+  - name: Media CDN (DigitalOcean Spaces)
+    url: https://txtcraft-media.tor1.digitaloceanspaces.com/tenants/tenant-solvedthings/media/1793462775916_bic.jpg
+    method: HEAD
+
+# Status Page Details
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.txtcraft.ca
+  name: TxtCraft Status
+  introTitle: "TxtCraft Platform Status"
+  introMessage: "Real-time performance and historical uptime monitoring for the TxtCraft website engine, wildcard routing, and asset delivery."
   navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: TxtCraft Home
+      href: https://txtcraft.ca
+    - title: Workspace Login
+      href: https://txtcraft.ca/login
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Incident issue settings
+assignees:
+  - graemescott2000
