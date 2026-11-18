@@ -1,7 +1,7 @@
 url: https://txtcraft.ca/api/health
-status: down
-code: 521
-responseTime: 149
-lastUpdated: 2026-11-18T00:55:23.431Z
+status: up
+code: 200
+responseTime: 177
+lastUpdated: 2026-11-18T02:32:17.303Z
 startTime: 2026-11-09T06:58:09.612Z
 generator: Upptime <https://github.com/upptime/upptime>
